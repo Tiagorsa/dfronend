@@ -1,0 +1,258 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #5c67f2;
+    --hover-color: #f5f5f9;
+    --border-color: #E0E3E7;
+    --text-color: #4A4A4A;
+    --success-color: #25d366;
+    --warning-color: #ffeb3b;
+    --error-color: #f44336;
+    --font-size: 14px;
+  }
+
+  /* Botões Modernizados */
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #357ABD;
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    /* background: #fff; */
+    box-shadow: inset 0 1px 3px var(--shadow-color);
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    /* background-color: var(--background-color); */
+    color: var(--text-color);
+    font-size: var(--font-size);
+    line-height: 1.6;
+  }
+  
+  /* Estilos Globais */
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+  }
+  
+  /* Contêiner do Canvas */
+  #efContainer {
+    position: relative;
+    overflow: auto;
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+
+  /* Barra de Ferramentas Superior */
+  .ef-tooltar {
+      height: 50px;
+      padding: 10px;
+      background: var(--primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px var(--shadow-color);
+      border-radius: 8px;
+  }
+  
+  /* Overlay */
+  .jtk-overlay {
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s;
+  }
+  
+  /* Menu de Nós */
+  .ef-node-pmenu {
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    width: 225px;
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+    padding-left: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .ef-node-pmenu:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .ef-node-menu-li {
+    color: var(--text-color);
+    width: 180px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: all 0.3s;
+  }
+  
+  .ef-node-menu-li:hover {
+    cursor: move;
+    background-color: var(--hover-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 12px;
+    cursor: pointer;
+  }
+  
+  .ef-node-menu-ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  /* Contêiner de Nós */
+  .ef-node-container {
+    position: absolute;
+    display: flex;
+    min-width: 150px;
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px !important;
+    max-height: 100px !important;
+    height: auto !important;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: background-color 0.3s, border 0.3s;
+    box-shadow: 2px 2px 6px var(--shadow-color);
+  }
+  
+  .ef-node-container:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--primary-color);
+  }
+  
+  /* Estilo de Nós Ativos */
+  .ef-node-active {
+    background-color: var(--hover-color);
+    border: 1px solid var(--primary-color);
+  }
+  
+  /* Ícone à Esquerda do Nó */
+  .ef-node-left-ico {
+    line-height: 32px;
+    margin-left: 8px;
+    align-self: center;
+    font-size: 26px;
+    transition: transform 0.3s;
+  }
+  
+  .ef-node-left-ico:hover {
+    cursor: crosshair;
+    transform: scale(1.1);
+  }
+  
+  /* Texto do Nó */
+  .ef-node-text {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    padding: 3px;
+    margin: 0;
+  }
+  
+  /* Ícone à Direita do Nó */
+  .ef-node-right-ico {
+    line-height: 32px;
+    position: absolute;
+    right: 5px;
+    color: var(--success-color);
+    cursor: default;
+  }
+  
+  /* Estados dos Nós */
+  .el-node-state-success {
+    color: var(--success-color);
+  }
+  
+  .el-node-state-error {
+    color: var(--error-color);
+  }
+  
+  .el-node-state-warning {
+    color: var(--warning-color);
+  }
+  
+  .el-node-state-running {
+    color: var(--success-color);
+  }
+  
+  /* Cabeçalho do Formulário de Nó */
+  .ef-node-form-header {
+    height: 32px;
+    border-top: 1px solid #dce3e8;
+    border-bottom: 1px solid #dce3e8;
+    background: #F1F3F4;
+    color: #000;
+    line-height: 32px;
+    padding-left: 12px;
+    font-size: var(--font-size);
+  }
+  
+  /* Label de Linha */
+  .jtk-overlay.flowLabel:not(.aLabel) {
+    padding: 4px 10px;
+    background-color: white;
+    color: #565758 !important;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+  }
+  
+  /* Label Vazia */
+  .emptyFlowLabel {}
+  
+  /* Estilos de Conectores */
+  .ef-dot {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+  }
+  
+  .ef-dot-hover {
+    background-color: red;
+  }
+  
+  .ef-rectangle {
+    background-color: var(--primary-color);
+  }
+  
+  .ef-rectangle-hover {
+    background-color: red;
+  }
+  
+  .ef-img {}
+  
+  .ef-img-hover {}
+  
+  .ef-drop-hover {
+    border: 1px dashed var(--primary-color);
+  }
+  
+  .flowHeightDefault {
+    height: calc(100vh - 135px);
+  }
+  

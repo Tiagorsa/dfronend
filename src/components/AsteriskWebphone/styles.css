@@ -1,0 +1,122 @@
+.asterisk-webphone {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.asterisk-webphone h2, 
+.asterisk-webphone h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.asterisk-webphone button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.asterisk-webphone button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.asterisk-webphone input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.asterisk-webphone input:focus {
+  outline: none;
+  border-color: #33b5e5;
+}
+
+.asterisk-webphone .status-indicator {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.asterisk-webphone .status-indicator.connected {
+  background-color: #00C851;
+  color: white;
+}
+
+.asterisk-webphone .status-indicator:not(.connected) {
+  background-color: #ff4444;
+  color: white;
+}
+
+.asterisk-webphone .call-button {
+  background-color: #00C851;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.asterisk-webphone .call-button:hover:not(:disabled) {
+  background-color: #007E33;
+}
+
+.asterisk-webphone .hangup-button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.asterisk-webphone .hangup-button:hover {
+  background-color: #CC0000;
+}
+
+.asterisk-webphone .active-call {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.asterisk-webphone .call-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.asterisk-webphone .call-controls {
+  display: flex;
+  justify-content: center;
+}
+
+/* Animações */
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.asterisk-webphone .status-ringing {
+  animation: ring 1s infinite;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .asterisk-webphone {
+    padding: 10px;
+  }
+
+  .asterisk-webphone .dial-pad {
+    flex-direction: column;
+  }
+
+  .asterisk-webphone .call-button {
+    margin-top: 10px;
+  }
+} 
